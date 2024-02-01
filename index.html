@@ -1,1 +1,34 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Image Zoom</title>
+<style>
+  img {
+    max-width: 800px; 
+  }
+</style>
+</head>
+<body>
+  <img src="C:\javascript prog\zoom in out\image\f1.jpg" alt="Image">
+  <button onclick="zoomIn()">+</button>
+  <button onclick="zoomOut()">-</button>
 
+  <script>
+    var myImage = document.getElementById("myImage");
+
+    function zoomIn() {
+      var currWidth = myImage.clientWidth;
+      if (currWidth < 1000) {
+        myImage.style.width = (currWidth + 50) + "px";
+      }
+    }
+
+    function zoomOut() {
+      var currWidth = myImage.clientWidth;
+      if (currWidth > 100) { 
+        myImage.style.width = (currWidth - 50) + "px";
+      }
+    }
+  </script>
+</body>
+</html>
